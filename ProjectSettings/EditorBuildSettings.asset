@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/seishu/titol.unity
+    guid: 94d903e310f633d4d91fed73e22fd4da
+  - enabled: 1
+    path: Assets/seishu/ru-rusetumei.unity
+    guid: 1a8b49f5e3ab9a346b6a9ad384c0b901
+  - enabled: 1
+    path: Assets/Scenes/mainscenes.unity
+    guid: 6bfc1df2bee0375409c4643c6a6203a7
+  - enabled: 1
+    path: Assets/seishu/result.unity
+    guid: f16aad4173052964496124753fb07960
   m_configObjects: {}
