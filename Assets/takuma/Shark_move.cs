@@ -6,13 +6,14 @@ public class Shark_move : MonoBehaviour
 {
     public enum Shark_Condition
     {
-        Patrolling,
-        Alert,
-        Battle,
+        Patrolling,//í èÌ
+        Alert,//åxâ˙
+        Battle,//êÌì¨
     }
     public Shark_Condition Condition;
     private GameObject Player;
     private GameObject Shark;
+    private Vector3 respawn;
     public float move_speed = 0.3f;
 
     void Start()
@@ -20,6 +21,7 @@ public class Shark_move : MonoBehaviour
         Condition = Shark_Condition.Patrolling;
         Player = GameObject.Find("Player");
         Shark = transform.Find("Shark").gameObject;
+        respawn = this.transform.position;
     }
     void Update()
     {
@@ -30,6 +32,11 @@ public class Shark_move : MonoBehaviour
         switch (Condition)
         {
             case Shark_Condition.Patrolling:
+                //this.transform.position = respawn;
+                this.transform.LookAt(respawn);
+                Shark.transform.localPosition += new Vector3(0, 0, move_speed);
+                this.transform.position = Shark.transform.position;
+                Shark.transform.localPosition = Vector3.zero;
                 break;
 
             case Shark_Condition.Alert:
@@ -42,16 +49,10 @@ public class Shark_move : MonoBehaviour
                 Shark.transform.localPosition = Vector3.zero;
                 break;
         }
-        /*if (Input.GetKey(KeyCode.W))
-        {
-            Shark.transform.localPosition += new Vector3(0, 0, 0.1f);
-            this.transform.position = Shark.transform.position;
-            Shark.transform.localPosition = Vector3.zero;
-        }*/
     }
-    void OnTriggerStay(Collider Collider)
+    void OnTriggerStay(Collider other)
     {
-        if(Collider.gameObject == Player) Condition = Shark_Condition.Battle;
+        if(other.gameObject.CompareTag("Player")) Condition = Shark_Condition.Battle;
     }
     void OnTriggerExit(Collider Collider)
     {
