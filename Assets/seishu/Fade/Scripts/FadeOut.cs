@@ -8,7 +8,7 @@ public class FadeOut : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fade.FadeOut(1f);
+        fade.FadeOut(2f);
     }
 
     // Update is called once per frame

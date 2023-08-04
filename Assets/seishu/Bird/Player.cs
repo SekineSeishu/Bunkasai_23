@@ -6,10 +6,11 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float Speed = 0.03f;
-    [SerializeField] private float setSpeed;
-    [SerializeField] public float playerSlowSpeed = 0.01f; // プレイヤーの遅いスピード
+    //[SerializeField] private float setSpeed;
+    //[SerializeField] public float playerSlowSpeed = 0.01f; // プレイヤーの遅いスピード
 
     //private float originalSpeed; // プレイヤーの元の速度を保存する変数
+    private ParticleSystem particles;
     private Vector2 movementValue;
     public InputAction inputMover;
     private Animator anim = null;
@@ -27,6 +28,8 @@ public class Player : MonoBehaviour
 
         //コンポーネントのインスタンスを捕まえる
         anim = GetComponent<Animator>();
+        particles = GetComponentInChildren<ParticleSystem>(); 
+        // 子オブジェクトからParticleSystemコンポーネントを取得
         // プレイヤーの元の速度を保存
         //originalSpeed = Speed;
     }
@@ -54,8 +57,26 @@ public class Player : MonoBehaviour
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
+        //キャラクターが移動中軌跡を残す
+        if (isMoving)
+        {
+            //オブジェクトを呼び出す
+            if (!particles.isPlaying)
+            {
+                particles.Play();// キャラクターが動いている場合はParticleを再生する
+            }
+
+        }
+        else
+        {
+            if (particles.isPlaying)
+            {
+                particles.Stop();// キャラクターが動いている場合はParticleを停止する
+            }
+        }
 
     }
+
     /* 敵に当たった時に時間を遅くする処理を追加
     private void OnTriggerEnter2D(Collider2D collision)
     {

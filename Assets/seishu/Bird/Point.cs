@@ -6,7 +6,7 @@ public class Point : MonoBehaviour
 {
     public int Addscorepoint = 1;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {

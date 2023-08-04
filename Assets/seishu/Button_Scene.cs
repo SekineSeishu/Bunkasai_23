@@ -9,7 +9,7 @@ public class Button_Scene : MonoBehaviour
     public void onClick()
     {
         //トランジションを掛けてシーン遷移する
-        fade.FadeIn(1f, () =>
+        fade.FadeIn(2f, () =>
         {
             SceneManager.LoadScene(LoadScene);
             Debug.Log("ボタンが押されました");
