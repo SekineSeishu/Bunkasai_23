@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - point
+  - goal
   layers:
   - Default
   - TransparentFX

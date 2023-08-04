@@ -7,10 +7,18 @@ public class LifeManager : MonoBehaviour
 {
     private int Life;
     private Text lifetext;
+    public Text GameOver;
+    public GameObject Button;
+    public GameObject VirtulMouse;
+    public GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
         Life = 5;
+        GameOver.enabled = false;
+        Button.SetActive(false);
+        VirtulMouse.SetActive(false);
+        Player.SetActive(true);
         lifetext = GameObject.Find("Life").GetComponent<Text>();
         SetLifeText(Life);
     }
@@ -26,6 +34,13 @@ public class LifeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Life == 0)
+        {
+            GameOver.enabled = true;
+            Button.SetActive(true);
+            VirtulMouse.SetActive(true);
+            Player.SetActive(false);
+        }
+
     }
 }
