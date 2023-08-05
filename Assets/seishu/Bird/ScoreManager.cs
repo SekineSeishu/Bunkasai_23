@@ -3,10 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class ScoreManager : MonoBehaviour
 {
-    private int score;
+    private static int score;
     private Text ScoreText;
+    public GameObject SceneManager;
+    private static ScoreManager instance;
+    public static ScoreManager Instance { get { return instance; } }
+    public int Score { get { return score; } }
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        DontDestroyOnLoad(SceneManager);
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +36,7 @@ public class ScoreManager : MonoBehaviour
         score += point;
         SetScoreText(score);
     }
-    public void PullScore(int point)
-    {
-        score -= point;
-        SetScoreText(score);
-    }
+    
 
     // Update is called once per frame
     void Update()

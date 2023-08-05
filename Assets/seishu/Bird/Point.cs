@@ -18,8 +18,9 @@ public class Point : MonoBehaviour
         {
             //コインSE
             audio.PlayOneShot(PointSE);
-            GameObject gm = GameObject.Find("ScoreManager");
-            gm.GetComponent<ScoreManager>().AddScore(Addscorepoint);
+            //GameObject gm = GameObject.Find("ScoreManager");
+            //gm.GetComponent<ScoreManager>(). AddScore(Addscorepoint);
+            ScoreManager.Instance.AddScore(Addscorepoint);
             GetPoint();
         }
     }
