@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class ClearManager : MonoBehaviour
 {
-    private AudioSource audio;
-    public AudioClip ClearSE;
     public Text Clear;
     public GameObject Button;
     public GameObject VirtulMouse;
@@ -17,7 +15,6 @@ public class ClearManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audio = gameObject.AddComponent<AudioSource>();
         Clear.enabled = false;
         Button.SetActive(false);
         VirtulMouse.SetActive(false);
@@ -30,8 +27,6 @@ public class ClearManager : MonoBehaviour
     {
         if (collision.gameObject.tag == "goal")
         {
-            //ÉNÉäÉASE
-            audio.PlayOneShot(ClearSE);
             Clear.enabled = true;
             Button.SetActive(true);
             VirtulMouse.SetActive(true);
