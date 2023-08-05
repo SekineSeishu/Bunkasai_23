@@ -12,6 +12,7 @@ public class ClearManager : MonoBehaviour
     public GameObject VirtulMouse;
     public GameObject ScoreIcon;
     public GameObject ScoreIconQ;
+    public GameObject BGM;
     public GameObject Player;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class ClearManager : MonoBehaviour
         VirtulMouse.SetActive(false);
         ScoreIconQ.SetActive(false);
         ScoreIcon.SetActive(true);
+        BGM.SetActive(true);
         Player.SetActive(true);
     }
     private void OnCollisionEnter(Collision collision)
@@ -35,6 +37,7 @@ public class ClearManager : MonoBehaviour
             VirtulMouse.SetActive(true);
             ScoreIcon.SetActive(false);
             ScoreIconQ.SetActive(true);
+            BGM.SetActive(false);
             Player.SetActive(false);
         }
     }
