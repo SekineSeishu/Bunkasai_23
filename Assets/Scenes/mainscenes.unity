@@ -8836,7 +8836,7 @@ MonoBehaviour:
   Button: {fileID: 1038157595}
   VirtulMouse: {fileID: 304654296}
   Player: {fileID: 2117994993}
-  GameOverSE: {fileID: 0}
+  GameOverSE: {fileID: 8300000, guid: 424c619488be23049bc2dc866366c6ef, type: 3}
   BGM: {fileID: 1139846674}
 --- !u!4 &281315254
 Transform:
