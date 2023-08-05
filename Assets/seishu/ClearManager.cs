@@ -7,10 +7,11 @@ public class ClearManager : MonoBehaviour
 {
     private AudioSource audio;
     public AudioClip ClearSE;
-
     public Text Clear;
     public GameObject Button;
     public GameObject VirtulMouse;
+    public GameObject ScoreIcon;
+    public GameObject ScoreIconQ;
     public GameObject Player;
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,8 @@ public class ClearManager : MonoBehaviour
         Clear.enabled = false;
         Button.SetActive(false);
         VirtulMouse.SetActive(false);
+        ScoreIconQ.SetActive(false);
+        ScoreIcon.SetActive(true);
         Player.SetActive(true);
     }
     private void OnCollisionEnter(Collision collision)
@@ -30,6 +33,8 @@ public class ClearManager : MonoBehaviour
             Clear.enabled = true;
             Button.SetActive(true);
             VirtulMouse.SetActive(true);
+            ScoreIcon.SetActive(false);
+            ScoreIconQ.SetActive(true);
             Player.SetActive(false);
         }
     }

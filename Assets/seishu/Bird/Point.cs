@@ -14,7 +14,7 @@ public class Point : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "point")
+        if (collision.gameObject.tag == "Player")
         {
             //コインSE
             audio.PlayOneShot(PointSE);
