@@ -34,8 +34,8 @@ public class Player : MonoBehaviour
         //originalSpeed = Speed;
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    private void FixedUpdate()
     {
         movementValue = inputMover.ReadValue<Vector2>();
         transform.Translate(

@@ -11,11 +11,14 @@ public class Damege : MonoBehaviour
     //public GameObject hp;
     public bool on_damage = false;       //ダメージフラグ
     private SpriteRenderer renderer;
+    private AudioSource audio;
+    public AudioClip DamegeSE;
     // Start is called before the first frame update
     void Start()
     {
         // 点滅処理の為に呼び出しておく
         renderer = gameObject.GetComponent<SpriteRenderer>();
+        audio = gameObject.AddComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -33,6 +36,8 @@ public class Damege : MonoBehaviour
         // on damage
         if (!on_damage && collision.gameObject.tag == "Enemy")
         {
+            //ダメージSE
+            audio.PlayOneShot(DamegeSE);
             //hp.gameObject.SendMessage("onDamage", 10);
             GameObject gm = GameObject.Find("LifeManager");
             gm.GetComponent<LifeManager>().PullLife(PullLifepoint);
