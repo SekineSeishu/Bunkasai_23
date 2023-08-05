@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shark_move : MonoBehaviour
+public class Shark_move2 : MonoBehaviour
 {
     public enum Shark_Condition
     {

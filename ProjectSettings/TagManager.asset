@@ -5,8 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+<<<<<<< HEAD
   - point
   - goal
+=======
+  - Pat_pos
+>>>>>>> 9cbb533 (サメを追加)
   layers:
   - Default
   - TransparentFX
