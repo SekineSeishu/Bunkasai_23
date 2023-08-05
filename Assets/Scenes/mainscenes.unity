@@ -5694,7 +5694,7 @@ GameObject:
   - component: {fileID: 120335690}
   - component: {fileID: 120335689}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: Square (goal)
   m_TagString: goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5773,7 +5773,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120335688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -59.65, y: 3.31, z: -5.82}
+  m_LocalPosition: {x: -60.65, y: 3.31, z: -5.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7206,7 +7206,7 @@ GameObject:
   - component: {fileID: 316781239}
   - component: {fileID: 316781238}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Square(coin)
   m_TagString: point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7253,7 +7253,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 999c08033ff23254ea986360111d66bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7272,7 +7272,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316781235}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -63.61, y: 3.31, z: -5.82}
+  m_LocalPosition: {x: -62.86, y: 3.31, z: -5.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7305,7 +7305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Addscorepoint: 1
-  PointSE: {fileID: 0}
+  PointSE: {fileID: 8300000, guid: a84662c77867f9d49a7ef78b57794f13, type: 3}
 --- !u!1001 &318179314
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7459,7 +7459,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &370544507
 MonoBehaviour:
@@ -14513,7 +14513,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686078907}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 628.80566, y: 138.9636, z: 303.7651}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14547,7 +14547,7 @@ Transform:
   - {fileID: 588924426}
   - {fileID: 1487630119}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1687904187
 PrefabInstance:
