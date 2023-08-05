@@ -6,16 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/seishu/titol.unity
+    path: Assets/Scenes/titol.unity
     guid: 8fecd340f6f2f3d4d82b5201ffecbbb5
   - enabled: 1
-    path: Assets/seishu/LoadScene.unity
+    path: Assets/Scenes/LoadScene.unity
     guid: e734218ae98687a4396136edf4a91430
   - enabled: 1
     path: Assets/Scenes/mainscenes.unity
     guid: 6bfc1df2bee0375409c4643c6a6203a7
   - enabled: 1
-    path: Assets/seishu/result.unity
+    path: Assets/Scenes/result.unity
     guid: b6a3b006550daa34ab30c4cdfa50f37e
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b8b55db369270dc40be25360574d53c2, type: 2}

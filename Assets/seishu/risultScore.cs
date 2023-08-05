@@ -10,7 +10,7 @@ public class risultScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        RisultText = GameObject.Find("risultScore").GetComponent<Text>();
+        RisultText = GameObject.Find("risultscore").GetComponent<Text>();
         SetRisultText(finalScore);
     }
     void SetRisultText(int score)

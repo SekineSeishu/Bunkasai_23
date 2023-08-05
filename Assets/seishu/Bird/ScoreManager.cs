@@ -2,23 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
+using System;
 
 public class ScoreManager : MonoBehaviour
 {
     private static int score;
     private Text ScoreText;
-    public GameObject SceneManager;
+    public GameObject SManager;
+    //リセット用
+    private Vector3 initialPosition;
     private static ScoreManager instance;
     public static ScoreManager Instance { get { return instance; } }
     public int Score { get { return score; } }
     private void Awake()
     {
+        initialPosition = transform.position;//保存
         if (instance == null)
         {
             instance = this;
         }
-        DontDestroyOnLoad(SceneManager);
+        else
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(SManager);
     }
     // Start is called before the first frame update
     void Start()
@@ -36,11 +44,19 @@ public class ScoreManager : MonoBehaviour
         score += point;
         SetScoreText(score);
     }
-    
+    public void ResetObjectTransform()
+    {
+        // オブジェクトの位置を初期値にリセット
+        transform.position = initialPosition;
+    }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        // SceneManagerの名前がタイトルの場合にScoreManagerを破棄
+        if (SceneManager.GetActiveScene().name == "titol")
+        {
+            Destroy(gameObject);
+        }
     }
 }

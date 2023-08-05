@@ -6807,6 +6807,7 @@ GameObject:
   - component: {fileID: 304654298}
   - component: {fileID: 304654299}
   - component: {fileID: 304654297}
+  - component: {fileID: 304654300}
   m_Layer: 0
   m_Name: VirtulMouse
   m_TagString: Untagged
@@ -6922,7 +6923,7 @@ MonoBehaviour:
   m_ScrollWheelAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Scroll Wheel
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: 239c707d-4adf-4bdc-a14b-6e208b8c62d1
@@ -6947,6 +6948,21 @@ Transform:
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &304654299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304654296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853b4570f96d33d48bbbc41c010f0947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _virtualMouse: {fileID: 304654297}
+  _inputSystemUIInputModule: {fileID: 1589058772}
+  _canvas: {fileID: 1281213824}
+--- !u!114 &304654300
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7458,6 +7474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: {fileID: 254990658}
+  WaterSE: {fileID: 8300000, guid: 3beed2d2e8cb0ff47a30113349c039dd, type: 3}
 --- !u!1001 &378107940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9849,11 +9866,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 0d4f1e59275a38042a1b2d9b437de77b, type: 3}
-    m_FontSize: 60
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
-    m_MaxSize: 60
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -10131,7 +10148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7efb0257c13514bb5f29d29867552d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneManager: {fileID: 892643181}
+  SManager: {fileID: 892643181}
 --- !u!4 &892643183
 Transform:
   m_ObjectHideFlags: 0
@@ -10971,6 +10988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: {fileID: 1242785230}
+  WaterSE: {fileID: 0}
   LoadScene: result
 --- !u!1001 &1114644732
 PrefabInstance:
@@ -13410,11 +13428,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 0d4f1e59275a38042a1b2d9b437de77b, type: 3}
-    m_FontSize: 60
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
-    m_MaxSize: 60
+    m_MinSize: 1
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
