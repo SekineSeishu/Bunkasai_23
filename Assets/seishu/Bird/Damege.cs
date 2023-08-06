@@ -31,10 +31,10 @@ public class Damege : MonoBehaviour
             renderer.color = new Color(1f, 1f, 1f, level);
         }
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
         // on damage
-        if (!on_damage && collision.gameObject.tag == "Enemy")
+        if (!on_damage && collider.gameObject.tag == "Enemy")
         {
             //É_ÉÅÅ[ÉWSE
             audio.PlayOneShot(DamegeSE);
