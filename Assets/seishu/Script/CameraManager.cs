@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraManager : MonoBehaviour
 {
     GameObject player;
-    float cameraZ = -17.3f;
+    public float cameraZ = -17.3f;
     // Start is called before the first frame update
     void Start()
     {

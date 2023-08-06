@@ -20,7 +20,8 @@ public class Shark_move : MonoBehaviour
     private GameObject question_mark;
 
     private Vector3 respawn;
-    public int pat_num;
+    private int pat_num;
+    public float Detection_distance = 10;
     public int current_pos_num = 0;
     public float move_speed = 0.3f;
     public List<GameObject> Pat_pos_list = new List<GameObject>();
@@ -48,7 +49,7 @@ public class Shark_move : MonoBehaviour
     }
     void Update()
     {
-        if ((player.transform.position - shark.transform.position).magnitude <= 20)
+        if ((player.transform.position - shark.transform.position).magnitude <= Detection_distance)
         {
             if(Condition != Shark_Condition.Battle)
             {
@@ -58,7 +59,7 @@ public class Shark_move : MonoBehaviour
             }
             Condition = Shark_Condition.Battle;
         }
-        if ((player.transform.position - shark.transform.position).magnitude > 20)
+        if ((player.transform.position - shark.transform.position).magnitude > Detection_distance)
         {
             if (Condition != Shark_Condition.Patrolling)
             {
@@ -102,13 +103,6 @@ public class Shark_move : MonoBehaviour
     void LookAt2D_ob(GameObject target)
     {
         this.transform.LookAt(target.transform);
-        shark.transform.localPosition += new Vector3(0, 0, move_speed);
-        this.transform.position = shark.transform.position;
-        shark.transform.localPosition = Vector3.zero;
-    }
-    void LookAt2D_tr(Vector3 target)
-    {
-        this.transform.LookAt(target);
         shark.transform.localPosition += new Vector3(0, 0, move_speed);
         this.transform.position = shark.transform.position;
         shark.transform.localPosition = Vector3.zero;
