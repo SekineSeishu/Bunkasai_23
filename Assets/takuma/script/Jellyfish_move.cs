@@ -1,52 +1,37 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Jellyfish_move : MonoBehaviour
 {
-    [Header("--- 基本行動 ---")]
-            [Tooltip("行動範囲")] //使用方法の詳細はTAKUMAのシーンまでお願いします
-    public GameObject move_area;
+    private bool move_end = true;
+    private int angle;
+    private float move_num;
+    private int move_count;
 
-            [Tooltip("移動量")]//増やすと一回の行動に付き移動する蝶が増えます
-    public Vector3 move_num = Vector3.zero;
+    public float speed = 0.05f;
+    public Vector2 v_move_num = new Vector2 (25, 50);
 
-            [Tooltip("移動の滑らかさ")]//数が増えれば増えるほど移動中の挙動が細かくなります
-    public int move_count = 10;
-
-    public int hou = 0;
-    [Header("--- 移動速度 ---")]
-
-    public float up_move_num = 0.1f;
-
-
-    void Update()
+    void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.A)) StartCoroutine("IE_Jellyfish_move");
-    }
-
-    IEnumerator IE_Jellyfish_move()
-    {
-        for (; hou == 0;)//方向が指定されてないなら起動
+        if (move_end == false)
         {
-            hou = Random.Range(-1, 2);//此処で方向を決める
-            if (hou != 0)//方向が決まったなら
+            transform.Translate(0, speed, 0, Space.Self);
+            move_count++;
+            if (move_num <= move_count)
             {
-                Debug.Log(hou);
-                if(hou > 0) Debug.Log("右");
-                if(hou < 0) Debug.Log("左");
-                break;//方向が指定されたので次に以降
+                move_end = true;
+                move_count = 0;
             }
         }
-        for (int i = 0; i < move_count; i++)//move_countの数だけ繰り返し移動する
+        if (move_end == true)
         {
-            move_num += new Vector3(0.1f * hou,0.3f ,0);
-
-            this.transform.transform.position = move_num;
-
-            yield return new WaitForSeconds(up_move_num);
-            Debug.Log(move_num);
+            //�ړ���
+            move_num = Random.Range(v_move_num.x, v_move_num.y);
+            //�����_���ȕ���������
+            angle = Random.Range(0, 360);
+            transform.eulerAngles = new Vector3(0, 0, angle);
+            move_end = false;
         }
-        hou = 0;
     }
 }
