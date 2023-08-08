@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Detection_distance: 0.2
-  move_speed: 0.3
+  move_speed: 0.1
   Pat_pos_list: []
 --- !u!65 &2490890379003730515
 BoxCollider:
