@@ -49,6 +49,7 @@ public class LifeManager : MonoBehaviour
             VirtulMouse.SetActive(true);
             Player.SetActive(false);
             BGM.SetActive(false);
+            Life = -1;
         }
 
     }
