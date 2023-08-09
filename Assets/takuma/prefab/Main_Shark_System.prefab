@@ -331,7 +331,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1240957977405794315}
-  - component: {fileID: 1240957977405794314}
+  - component: {fileID: 2648320201693658216}
   - component: {fileID: 1240957977405794312}
   - component: {fileID: 1552993527062327333}
   m_Layer: 0
@@ -358,7 +358,7 @@ Transform:
   m_Father: {fileID: 1240957978197369242}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &1240957977405794314
+--- !u!114 &2648320201693658216
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -367,10 +367,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1240957977405794327}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10e3b0edc452d8547b3c5278253d0692, type: 3}
+  m_Script: {fileID: 11500000, guid: eda18e93c828bd94c9557b6e24124aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Condition: 0
+  pat_num: 0
   Detection_distance: 10
   current_pos_num: 0
   move_speed: 0.08

@@ -223,6 +223,9 @@ MonoBehaviour:
   PullLifepoint: 1
   on_damage: 0
   DamegeSE: {fileID: 8300000, guid: 926bc2249729cf8449d82efb67d4e03e, type: 3}
+  electric_effect: {fileID: 0}
+  damage_effect: {fileID: 0}
+  effect_spawn_point: {fileID: 0}
 --- !u!114 &163745132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -776,6 +779,10 @@ PrefabInstance:
     - target: {fileID: 1240957978197369243, guid: 04f3c7c4d54a2fb48869a1c504022b33, type: 3}
       propertyPath: m_Name
       value: Main_Shark_System
+      objectReference: {fileID: 0}
+    - target: {fileID: 2648320201693658216, guid: 04f3c7c4d54a2fb48869a1c504022b33, type: 3}
+      propertyPath: move_speed
+      value: 0.07
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04f3c7c4d54a2fb48869a1c504022b33, type: 3}

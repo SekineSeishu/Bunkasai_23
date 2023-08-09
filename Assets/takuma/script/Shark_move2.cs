@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Shark_move2 : MonoBehaviour
 {
@@ -21,10 +22,10 @@ public class Shark_move2 : MonoBehaviour
 
     private Vector3 respawn;
     public int pat_num;
+    public float Detection_distance = 10;
     public int current_pos_num = 0;
-    public float move_speed = 0.3f;
+    public float move_speed = 0.08f;
     public List<GameObject> Pat_pos_list = new List<GameObject>();
-
     void Start()
     {
         respawn = this.transform.position;
@@ -48,9 +49,9 @@ public class Shark_move2 : MonoBehaviour
     }
     void Update()
     {
-        if ((player.transform.position - shark.transform.position).magnitude <= 20)
+        if ((player.transform.position - shark.transform.position).magnitude <= Detection_distance)
         {
-            if(Condition != Shark_Condition.Battle)
+            if (Condition != Shark_Condition.Battle)
             {
                 Debug.Log("ãCÇ√Ç©ÇÍÇΩÅI");
                 Instantiate(exclamation_mark, effect_spawn_point.
@@ -58,7 +59,7 @@ public class Shark_move2 : MonoBehaviour
             }
             Condition = Shark_Condition.Battle;
         }
-        if ((player.transform.position - shark.transform.position).magnitude > 20)
+        if ((player.transform.position - shark.transform.position).magnitude > Detection_distance)
         {
             if (Condition != Shark_Condition.Patrolling)
             {
@@ -92,6 +93,7 @@ public class Shark_move2 : MonoBehaviour
     //Å´ìñÇΩÇËîªíËèàóù
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("ìñÇΩÇ¡ÇΩ");
         if (other.gameObject.CompareTag("Pat_pos"))
         {
             if (current_pos_num == (pat_num - 1)) current_pos_num = 0;
@@ -101,14 +103,7 @@ public class Shark_move2 : MonoBehaviour
     //Å´ä÷êî
     void LookAt2D_ob(GameObject target)
     {
-        this.transform.LookAt(target.transform);
-        shark.transform.localPosition += new Vector3(0, 0, move_speed);
-        this.transform.position = shark.transform.position;
-        shark.transform.localPosition = Vector3.zero;
-    }
-    void LookAt2D_tr(Vector3 target)
-    {
-        this.transform.LookAt(target);
+        this.transform.LookAt(target.transform.position);
         shark.transform.localPosition += new Vector3(0, 0, move_speed);
         this.transform.position = shark.transform.position;
         shark.transform.localPosition = Vector3.zero;

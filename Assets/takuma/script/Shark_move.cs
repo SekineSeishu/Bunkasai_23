@@ -28,6 +28,7 @@ public class Shark_move : MonoBehaviour
     public int current_pos_num = 0;
     public float move_speed = 0.3f;
     public List<GameObject> Pat_pos_list = new List<GameObject>();
+    
     private IEnumerator cortine = null;
     private bool isMove = true;
     private const int RADIUS = 10;
