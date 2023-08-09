@@ -37,7 +37,10 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-
+        if (rb.velocity != new Vector3(0, 0, 0))
+        {
+            rb.velocity = new Vector3(0, 0, 0);
+        }
     }
     private void FixedUpdate()
     {
@@ -105,4 +108,5 @@ public class Player : MonoBehaviour
         Speed = setSpeed;
         Debug.Log("Ç§ÅAìÆÇØÇÒÅI");
     }*/
+
 }
