@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Damege : MonoBehaviour
@@ -14,11 +15,20 @@ public class Damege : MonoBehaviour
     private AudioSource audio;
     public AudioClip DamegeSE;
     // Start is called before the first frame update
+
+    public GameObject electric_effect;
+    public GameObject damage_effect;
+    public GameObject effect_spawn_point;
+
     void Start()
     {
         // ì_ñ≈èàóùÇÃà◊Ç…åƒÇ—èoÇµÇƒÇ®Ç≠
         renderer = gameObject.GetComponent<SpriteRenderer>();
         audio = gameObject.AddComponent<AudioSource>();
+
+        electric_effect = (GameObject)Resources.Load("electric_effect");
+        damage_effect = (GameObject)Resources.Load("damage_effect");
+        effect_spawn_point = transform.Find("effect_spawn_point").gameObject;
     }
 
     // Update is called once per frame
@@ -33,6 +43,21 @@ public class Damege : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collider)
     {
+        if (collider.gameObject.GetComponent<Jellyfish_move>() && !on_damage)
+        {
+            Instantiate(electric_effect, effect_spawn_point.
+            transform.position, Quaternion.identity, this.transform);
+        }
+        if (collider.gameObject.GetComponent<Shark_move>() && !on_damage)
+        {
+            Instantiate(damage_effect, effect_spawn_point.
+            transform.position, Quaternion.identity, this.transform);
+        }
+        if (collider.gameObject.GetComponent<Muraenid_move>() && !on_damage)
+        {
+            Instantiate(damage_effect, effect_spawn_point.
+            transform.position, Quaternion.identity, this.transform);
+        }
         // on damage
         if (!on_damage && collider.gameObject.tag == "Enemy")
         {

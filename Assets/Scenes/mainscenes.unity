@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4332771, g: 0.46986878, b: 0.50558126, a: 1}
+  m_IndirectSpecularColor: {r: 0.43327686, g: 0.46986824, b: 0.50558037, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -36739,6 +36739,10 @@ PrefabInstance:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 2800000, guid: eb2474100d543da4388a7c4d7a981f28, type: 3}
+    - target: {fileID: 1240957977401749613, guid: 04f3c7c4d54a2fb48869a1c504022b33, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.83
+      objectReference: {fileID: 0}
     - target: {fileID: 1240957977405794314, guid: 04f3c7c4d54a2fb48869a1c504022b33, type: 3}
       propertyPath: move_speed
       value: 0.08
@@ -38104,6 +38108,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2068713655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2068713656}
+  m_Layer: 0
+  m_Name: effect_spawn_point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2068713656
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068713655}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2117994999}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2084431912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38896,6 +38931,7 @@ GameObject:
   - component: {fileID: 2117994996}
   - component: {fileID: 2117995004}
   - component: {fileID: 2117995003}
+  - component: {fileID: 2117995006}
   - component: {fileID: 2117995001}
   - component: {fileID: 2117995002}
   - component: {fileID: 2117995005}
@@ -38921,6 +38957,9 @@ MonoBehaviour:
   PullLifepoint: 1
   on_damage: 0
   DamegeSE: {fileID: 8300000, guid: 926bc2249729cf8449d82efb67d4e03e, type: 3}
+  electric_effect: {fileID: 0}
+  damage_effect: {fileID: 0}
+  effect_spawn_point: {fileID: 0}
 --- !u!114 &2117994997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39051,11 +39090,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117994993}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -75.7, y: 6.8, z: -5.75}
+  m_LocalPosition: {x: 207.4, y: 6.8, z: -5.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 85516818}
+  - {fileID: 2068713656}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -39153,6 +39193,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.71, y: 1.58, z: 0.1}
   m_Center: {x: 0.26, y: -0.14, z: 0}
+--- !u!114 &2117995006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117994993}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64eac99ff9b6f46489680fbe373d79ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electric_effect: {fileID: 0}
+  effect_spawn_point: {fileID: 0}
 --- !u!1 &2123461012
 GameObject:
   m_ObjectHideFlags: 0
