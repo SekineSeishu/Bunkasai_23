@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     //[SerializeField] public float playerSlowSpeed = 0.01f; // プレイヤーの遅いスピード
 
     //private float originalSpeed; // プレイヤーの元の速度を保存する変数
+    private Rigidbody rb;
     private ParticleSystem particles;
     private Vector2 movementValue;
     public InputAction inputMover;
@@ -25,7 +26,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        rb = this.gameObject.GetComponent<Rigidbody>();
         //コンポーネントのインスタンスを捕まえる
         anim = GetComponent<Animator>();
         particles = GetComponentInChildren<ParticleSystem>(); 
@@ -34,7 +35,10 @@ public class Player : MonoBehaviour
         //originalSpeed = Speed;
     }
 
-    
+    private void Update()
+    {
+
+    }
     private void FixedUpdate()
     {
         movementValue = inputMover.ReadValue<Vector2>();
