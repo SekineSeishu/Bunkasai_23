@@ -11,9 +11,9 @@ public class pointSe : MonoBehaviour
     {
         audio = gameObject.AddComponent<AudioSource>();
     }
-    private void OnCollisionEnter(Collision collision) 
+    private void OnTriggerEnter(Collider collider)
     {
-        if (collision.gameObject.tag == "point")
+        if (collider.gameObject.tag == "point")
         {
             audio.PlayOneShot(PointSE);
         }
