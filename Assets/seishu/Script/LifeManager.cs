@@ -14,6 +14,8 @@ public class LifeManager : MonoBehaviour
     private AudioSource audio;
     public AudioClip GameOverSE;
     public GameObject BGM;
+    public GameObject Score;
+    public GameObject ScoreQ;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,8 @@ public class LifeManager : MonoBehaviour
         VirtulMouse.SetActive(false);
         Player.SetActive(true);
         BGM.SetActive(true);
+        Score.SetActive(true);
+        ScoreQ.SetActive(false);
 
         lifetext = GameObject.Find("Life").GetComponent<Text>();
         SetLifeText(Life);
@@ -49,6 +53,8 @@ public class LifeManager : MonoBehaviour
             VirtulMouse.SetActive(true);
             Player.SetActive(false);
             BGM.SetActive(false);
+            Score.SetActive(false);
+            ScoreQ.SetActive(true);
             Life = -1;
         }
 
