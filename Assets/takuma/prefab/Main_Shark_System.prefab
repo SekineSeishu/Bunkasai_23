@@ -374,7 +374,7 @@ MonoBehaviour:
   pat_num: 0
   Detection_distance: 10
   current_pos_num: 0
-  move_speed: 0.07
+  move_speed: 0.065
   Pat_pos_list: []
 --- !u!54 &1240957977405794312
 Rigidbody:
