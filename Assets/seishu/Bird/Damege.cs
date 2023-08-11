@@ -91,20 +91,7 @@ public class Damege : MonoBehaviour
         on_damage = false;
         renderer.color = new Color(1f, 1f, 1f, 1f);
     }
-    /*public IEnumerator TriggerTimeSlow()
-    {
-        // タイムスケールを遅くする
-        Time.timeScale = slowTimeScale;
-        Debug.Log("ザ・ワールド！");
-
-        // 持続時間だけ待機
-        yield return new WaitForSecondsRealtime(slowDuration);
-
-        // タイムスケールを元に戻す
-        Time.timeScale = 1f;
-        Debug.Log("再び時は動き出す");
-        
-    }*/
+    
     
 }
    
