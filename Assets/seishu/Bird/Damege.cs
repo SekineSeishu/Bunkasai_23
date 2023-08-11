@@ -46,8 +46,9 @@ public class Damege : MonoBehaviour
             Instantiate(electric_effect, effect_spawn_point.
             transform.position, Quaternion.identity, this.transform);
         }
-        if (collider.gameObject.GetComponent<Shark_move>() && !on_damage)
+        if (collider.gameObject.GetComponent<Shark_move2>() && !on_damage)
         {
+            Debug.Log("ÉTÉÅÇ…ìñÇΩÇ¡ÇΩ");
             Instantiate(damage_effect, effect_spawn_point.
             transform.position, Quaternion.identity, this.transform);
         }
