@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4332771, g: 0.46986878, b: 0.50558126, a: 1}
+  m_IndirectSpecularColor: {r: 0.43327686, g: 0.46986824, b: 0.50558037, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11155,6 +11155,7 @@ GameObject:
   - component: {fileID: 1552505126}
   - component: {fileID: 1552505128}
   - component: {fileID: 1552505127}
+  - component: {fileID: 1552505129}
   m_Layer: 5
   m_Name: "\u30B5\u30E1"
   m_TagString: Untagged
@@ -11220,6 +11221,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552505125}
   m_CullTransparentMesh: 1
+--- !u!95 &1552505129
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552505125}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b56584e64e26da14cae55cce4870b7b4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1552613915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11438,6 +11459,7 @@ GameObject:
   - component: {fileID: 1572555400}
   - component: {fileID: 1572555402}
   - component: {fileID: 1572555401}
+  - component: {fileID: 1572555403}
   m_Layer: 5
   m_Name: "\u30A2\u30CA\u30B4"
   m_TagString: Untagged
@@ -11454,7 +11476,7 @@ RectTransform:
   m_GameObject: {fileID: 1572555399}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25680977, y: 0.32068652, z: 0.102298886}
+  m_LocalScale: {x: 27.686565, y: 27.686565, z: 2.8323047}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1064844599}
@@ -11463,7 +11485,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 258, y: 81.69998}
-  m_SizeDelta: {x: 930, y: 130}
+  m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1572555401
 MonoBehaviour:
@@ -11503,6 +11525,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572555399}
   m_CullTransparentMesh: 1
+--- !u!95 &1572555403
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572555399}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f5d8373205f1f984e81df50d99f0cb85, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1575222486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12613,6 +12655,7 @@ GameObject:
   - component: {fileID: 1748533500}
   - component: {fileID: 1748533502}
   - component: {fileID: 1748533501}
+  - component: {fileID: 1748533503}
   m_Layer: 5
   m_Name: "\u30AF\u30E9\u30B2"
   m_TagString: Untagged
@@ -12678,6 +12721,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748533499}
   m_CullTransparentMesh: 1
+--- !u!95 &1748533503
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748533499}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9e62e2b0837769d4bb2b392c327c4b3c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1762287753
 PrefabInstance:
   m_ObjectHideFlags: 0
