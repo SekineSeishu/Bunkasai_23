@@ -15,7 +15,7 @@ public class LifeManager : MonoBehaviour
 
     public int life { get { return Life; } }
 
-    public Text GameOver;
+    public GameObject GameOver;
     public GameObject VirtulMouse;
     public GameObject Player;
     private AudioSource audio;
@@ -24,7 +24,7 @@ public class LifeManager : MonoBehaviour
     public GameObject Score;
     public GameObject ScoreQ;
     public Text Rtext;
-
+    public GameObject ScoreInput;
     private void Awake()
     {
         initialPosition = transform.position;//保存
@@ -43,13 +43,14 @@ public class LifeManager : MonoBehaviour
     {
         Life = 5;
         audio = gameObject.AddComponent<AudioSource>();
-        GameOver.enabled = false;
+        GameOver.SetActive(false);
         VirtulMouse.SetActive(false);
         Player.SetActive(true);
         BGM.SetActive(true);
         Score.SetActive(true);
         ScoreQ.SetActive(false);
         Rtext.enabled = false;
+        ScoreInput.SetActive(false);
 
         lifetext = GameObject.Find("Life").GetComponent<Text>();
         SetLifeText(Life);
@@ -70,14 +71,16 @@ public class LifeManager : MonoBehaviour
         {
             //ゲームオーバーSE
             audio.PlayOneShot(GameOverSE);
-            GameOver.enabled = true;
+            GameOver.SetActive(true);
             VirtulMouse.SetActive(true);
             Player.SetActive(false);
             BGM.SetActive(false);
             Score.SetActive(false);
             ScoreQ.SetActive(true);
             Rtext.enabled = true;
+            ScoreInput.SetActive(true);
             Life = -1;
+            
         }
 
     }

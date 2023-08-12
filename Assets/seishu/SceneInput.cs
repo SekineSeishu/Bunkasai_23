@@ -328,6 +328,17 @@ public partial class @SceneInput : IInputActionCollection2, IDisposable
                     ""action"": ""Scene"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3e359ce4-7059-4161-85c4-7800b834fd79"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Scene"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },

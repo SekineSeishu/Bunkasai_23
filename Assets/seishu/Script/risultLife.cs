@@ -15,7 +15,16 @@ public class risultLife : MonoBehaviour
     }
     void SetRisultText(int life)
     {
-        RisultLifeText.text = "残りライフ・・・" + life.ToString();
+        if (life <= 0)
+        {
+            life = 0;
+            RisultLifeText.text = "残りライフ・・・" + life.ToString();
+        }
+        else
+        {
+            RisultLifeText.text = "残りライフ・・・" + life.ToString();
+        }
+        
     }
     // Update is called once per frame
     void Update()

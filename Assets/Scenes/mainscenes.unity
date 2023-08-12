@@ -9187,7 +9187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LManager: {fileID: 281315252}
-  GameOver: {fileID: 871310895}
+  GameOver: {fileID: 871310893}
   VirtulMouse: {fileID: 304654296}
   Player: {fileID: 2117994993}
   GameOverSE: {fileID: 8300000, guid: 1ff59930cfa4cd748b161570a9a7a9c6, type: 3}
@@ -9195,6 +9195,7 @@ MonoBehaviour:
   Score: {fileID: 1453454877}
   ScoreQ: {fileID: 210721908}
   Rtext: {fileID: 1620190731}
+  ScoreInput: {fileID: 48679063}
 --- !u!4 &281315254
 Transform:
   m_ObjectHideFlags: 0
@@ -41000,6 +41001,7 @@ MonoBehaviour:
   BGM: {fileID: 1139846674}
   Player: {fileID: 2117994993}
   Rtext: {fileID: 1620190731}
+  ScoreInput: {fileID: 48679063}
 --- !u!114 &2117995004
 MonoBehaviour:
   m_ObjectHideFlags: 0

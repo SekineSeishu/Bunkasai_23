@@ -12,6 +12,7 @@ public class ClearManager : MonoBehaviour
     public GameObject BGM;
     public GameObject Player;
     public Text Rtext;
+    public GameObject ScoreInput;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class ClearManager : MonoBehaviour
         BGM.SetActive(true);
         Player.SetActive(true);
         Rtext.enabled = false;
+        ScoreInput.SetActive(false);
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -34,6 +36,7 @@ public class ClearManager : MonoBehaviour
             BGM.SetActive(false);
             Player.SetActive(false);
             Rtext.enabled = true;
+            ScoreInput.SetActive(true);
         }
     }
     // Update is called once per frame
