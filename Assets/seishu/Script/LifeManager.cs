@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LifeManager : MonoBehaviour
 {
@@ -80,8 +81,14 @@ public class LifeManager : MonoBehaviour
             Rtext.enabled = true;
             ScoreInput.SetActive(true);
             Life = -1;
-            
-        }
 
+        }
+        //SceneManagerの名前がタイトルの場合にScoreManagerを破棄
+        if (SceneManager.GetActiveScene().name == "titol")
+        {
+            Destroy(LManager);
+        }
     }
+
 }
+

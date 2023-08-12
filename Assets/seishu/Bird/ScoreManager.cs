@@ -56,7 +56,7 @@ public class ScoreManager : MonoBehaviour
         // SceneManagerの名前がタイトルの場合にScoreManagerを破棄
         if (SceneManager.GetActiveScene().name == "titol")
         {
-            Destroy(gameObject);
+            Destroy(SManager);
         }
     }
 }
