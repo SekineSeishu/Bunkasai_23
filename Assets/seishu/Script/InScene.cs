@@ -6,15 +6,17 @@ using UnityEngine.SceneManagement;
 public class InScene : MonoBehaviour
 {
     private SceneInput sceneinput;
-    public string LoadScene;
-    public Fade fade;
-    private AudioSource audio;
-    public AudioClip WaterSE;
+    public string LoadScene;//移動先シーンネーム
+    public Fade fade;//フェイドインシーン移動
+    private AudioSource audio;//SEを流す先
+    public AudioClip WaterSE;//シーン移動する際のSE
+    private bool inFade;//フェイドをかけてシーン移動するか判断
 
     // Start is called before the first frame update
     void Start()
     {
-        audio = gameObject.AddComponent<AudioSource>();
+        //入力可能にする
+        audio = gameObject.GetComponent<AudioSource>();
         sceneinput = new SceneInput();
         sceneinput.Enable();
     }
@@ -24,13 +26,20 @@ public class InScene : MonoBehaviour
     {
         if (sceneinput.Player.Scene.triggered)
         {
-            audio.PlayOneShot(WaterSE);
-            //トランジションを掛けてシーン遷移する
-            fade.FadeIn(2f, () =>
+            if (inFade)
+            {
+                audio.PlayOneShot(WaterSE);
+                //トランジションを掛けてシーン遷移する
+                fade.FadeIn(2f, () =>
+                {
+                    SceneManager.LoadScene(LoadScene);
+                    Debug.Log("ボタンが押されました");
+                });
+            }
+            else
             {
                 SceneManager.LoadScene(LoadScene);
-                Debug.Log("ボタンが押されました");
-            });
+            }
         }
     }
 }
