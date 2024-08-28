@@ -10,13 +10,14 @@ public class Point : MonoBehaviour
 
     private void Start()
     {
-        audio = GetComponent<AudioSource>();
+        
     }
     private void OnTriggerEnter(Collider collider)
     {
         //コイン獲得
         if (collider.gameObject.tag == "Player")
         {
+            audio = collider.gameObject.GetComponent<AudioSource>();
             audio.PlayOneShot(PointSE);
             ScoreManager.Instance.AddScore(Addscorepoint);
             GetPoint();
