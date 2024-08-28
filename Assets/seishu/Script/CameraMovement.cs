@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
+    //タイトルとリザルト画面の移動する背景
     public Transform respawnPosition; // リスポーン位置
     public float moveSpeed = 5f; // カメラの移動スピード
 
