@@ -18,7 +18,7 @@ public class Damege : MonoBehaviour
     {
         // “_–Åˆ—‚Ìˆ×‚ÉŒÄ‚Ño‚µ‚Ä‚¨‚­
         renderer = gameObject.GetComponent<SpriteRenderer>();
-        audio = gameObject.AddComponent<AudioSource>();
+        audio = gameObject.GetComponent<AudioSource>();
 
         electric_effect = (GameObject)Resources.Load("electric_effect");
         damage_effect = (GameObject)Resources.Load("damage_effect");
