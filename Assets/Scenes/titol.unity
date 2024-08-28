@@ -4932,8 +4932,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 695238673}
-  - component: {fileID: 695238672}
   - component: {fileID: 695238671}
+  - component: {fileID: 695238674}
   m_Layer: 0
   m_Name: BGMmanager
   m_TagString: Untagged
@@ -5037,19 +5037,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &695238672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 695238670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274c92dd20f0926438b6dd6eacd4800d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bgmManager: {fileID: 695238670}
 --- !u!4 &695238673
 Transform:
   m_ObjectHideFlags: 0
@@ -5065,6 +5052,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &695238674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695238670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274c92dd20f0926438b6dd6eacd4800d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmManager: {fileID: 695238670}
 --- !u!1001 &729495387
 PrefabInstance:
   m_ObjectHideFlags: 0
