@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Button2_Scene : MonoBehaviour
 {
-    public string LoadScene;
+    public string _loadScene;
     public void OnClick()
     {
-        SceneManager.LoadScene(LoadScene);
+        SceneManager.LoadScene(_loadScene);
     }
     // Start is called before the first frame update
     void Start()
